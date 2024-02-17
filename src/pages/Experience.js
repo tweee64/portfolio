@@ -5,6 +5,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import { styles } from "../styles";
 
 import { experiences } from "../constants";
 
@@ -58,9 +59,7 @@ function Experience() {
   return (
     <MainLayout>
       <div className=" p-10">
-        <h2 className="text-5xl text-center py-2 text-teal-600 font-medium">
-          Experience
-        </h2>
+        <h2 className={styles.sectionHeadText}>Experience</h2>
 
         <VerticalTimeline lineColor="gray">
           {experiences.map((experience, index) => (

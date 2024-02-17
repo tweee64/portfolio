@@ -6,6 +6,8 @@ import backend from "../backend.png";
 import frontend from "../frontend.png";
 import ux from "../ux.png";
 import prototype from "../prototype.png";
+import send from "../send.png";
+import sendHover from "../sendHover.png";
 
 export {
   ncs_icon,
@@ -16,4 +18,6 @@ export {
   frontend,
   ux,
   prototype,
+  send,
+  sendHover,
 };

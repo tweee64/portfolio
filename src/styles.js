@@ -12,7 +12,6 @@ const styles = {
   flexStart: "flex justify-start items-start",
   flexEnd: "flex justify-end",
   navPadding: "pt-[98px]",
-
   paddingX: "sm:px-16 px-6",
   paddingY: "sm:py-16 py-6",
   padding: "sm:px-16 px-6 sm:py-16 py-10",
@@ -23,7 +22,7 @@ const styles = {
     "text-eerieBlack font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
 
   sectionHeadText:
-    "text-eerieBlack font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins",
+    "text-eerieBlack font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins text-center",
   sectionHeadTextLight:
     "text-timberWolf font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins",
   sectionSubText:

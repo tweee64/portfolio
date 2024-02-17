@@ -33,9 +33,6 @@ function About() {
   return (
     <MainLayout>
       <div className=" p-10">
-        <h2 className="text-5xl text-center py-2 text-teal-600 font-medium">
-          About
-        </h2>
         <div></div>
         <motion.section
           variants={staggerContainer()}
@@ -45,19 +42,32 @@ function About() {
           className={` `}
         >
           <motion.div variants={textVariant()}>
+            {" "}
+            <h2 className={styles.sectionHeadText}>About</h2>{" "}
             <p className={styles.sectionSubText}>Introduction</p>
-            <h2 className={styles.sectionHeadText}>Overview.</h2>{" "}
           </motion.div>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
             className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-            sapiente ipsum dolorum dicta eaque cumque inventore molestias,
-            beatae ea quaerat alias accusamus voluptas autem! Alias odit
-            voluptates in totam vitae dignissimos minus eaque culpa unde tempore
-            dolore aperiam obcaecati voluptatum aliquam corrupti, suscipit
-            accusamus! Odit unde veniam dolorum ipsum doloribus.
+            Focused, results-driven and passionate about technology, I am
+            particularly interested in front-end developer roles and
+            product-related roles that help to connect and bring technology to
+            people and businesses.
+            <li>
+              {" "}
+              Hands-on experience with Front-end development tools, APIs and
+              prototyping frameworks
+            </li>
+            <li>
+              Effective communicator who frequently collaborates
+              cross-functionally with seniors in the technology sector
+            </li>
+            <li>
+              A fast learner, team player and leader who thrives in fast-paced
+              and challenging environment self-driven individuals who is humble
+              to learn and contribute
+            </li>
           </motion.p>
 
           <div className="mt-20 flex justify-between flex-wrap gap-10 ">
