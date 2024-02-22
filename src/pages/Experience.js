@@ -57,7 +57,8 @@ function Experience() {
   );
 
   return (
-    <MainLayout>
+    <span className="hash-span" id="experience">
+      &nbsp;
       <div className=" p-10">
         <h2 className={styles.sectionHeadText}>Experience</h2>
 
@@ -67,7 +68,7 @@ function Experience() {
           ))}
         </VerticalTimeline>
       </div>
-    </MainLayout>
+    </span>
   );
 }
 

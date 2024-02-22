@@ -4,7 +4,7 @@ import MainLayout from "./layout/MainLayout";
 import { styles } from "./styles";
 export default function Home() {
   return (
-    <MainLayout>
+    <div>
       <div className="text-center p-10">
         <h2 className={styles.sectionHeadTextLight}>Thuy Pham</h2>
         <h3 className={styles.sectionSubTextLight}>Frontend Developer</h3>
@@ -22,6 +22,6 @@ export default function Home() {
       <div className="relative mx-auto w-80 h-80">
         <img className="rounded-xl " alt="profilepic" src={profilepic} />
       </div>
-    </MainLayout>
+    </div>
   );
 }

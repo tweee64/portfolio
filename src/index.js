@@ -8,27 +8,27 @@ import Contact from "./pages/Contact";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "about",
-    element: <About />,
-  },
-  {
-    path: "experience",
-    element: <Experience />,
-  },
-  {
-    path: "contact",
-    element: <Contact />,
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//   },
+//   {
+//     path: "about",
+//     element: <About />,
+//   },
+//   {
+//     path: "experience",
+//     element: <Experience />,
+//   },
+//   {
+//     path: "contact",
+//     element: <Contact />,
+//   },
+// ]);
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 

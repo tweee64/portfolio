@@ -9,6 +9,25 @@ import {
   prototype,
 } from "../assets/index";
 
+export const navLinks = [
+  {
+    id: "home",
+    title: "Home",
+  },
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+
 const experiences = [
   {
     title: "Software Engineer",

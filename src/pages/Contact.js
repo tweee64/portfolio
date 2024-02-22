@@ -4,6 +4,8 @@ import { styles } from "../styles";
 import emailjs from "emailjs-com";
 import { useState, useRef } from "react";
 import { send, sendHover } from "../assets";
+import { motion } from "framer-motion";
+import { slideIn, staggerContainer } from "../utils/motion";
 
 function Contact() {
   const formRef = useRef();
@@ -93,105 +95,118 @@ function Contact() {
       );
   };
   return (
-    <MainLayout>
-      <div className=" p-10">
-        <h2 className={styles.sectionHeadText}>Contact</h2>
-        <div className="flex justify-center h-screen">
-          <div className="bg-gray-300 w-9/12 h-4/6 p-10 rounded-md self-center">
-            <h3 className={styles.sectionSubText}>Get in Touch</h3>
-            <form
-              ref={formRef}
-              onSubmit={handleSubmit}
-              className="flex flex-col justify-between h-32"
-            >
-              <div className="my-2">
-                <label className="text-timberWolf font-medium mb-4">
-                  Your Name:
-                  <div className="mt-2">
-                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
-                    <input
-                      className="w-full"
-                      type="text"
-                      value={form.name}
-                      onChange={handleChange}
-                      name="name"
-                    />
+    <span id="contact">
+      <motion.section
+        variants={staggerContainer()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={` `}
+      >
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className="flex-[0.75] bg-jet p-8 rounded-2xl"
+        >
+          <div className=" p-10">
+            <h2 className={styles.sectionHeadText}>Contact</h2>
+            <div className="flex justify-center h-screen">
+              <div className="bg-gray-300 w-9/12 h-4/6 p-10 rounded-md self-center">
+                <h3 className={styles.sectionSubText}>Get in Touch</h3>
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  className="flex flex-col justify-between h-32"
+                >
+                  <div className="my-2">
+                    <label className="text-timberWolf font-medium mb-4">
+                      Your Name:
+                      <div className="mt-2">
+                        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
+                        <input
+                          className="w-full"
+                          type="text"
+                          value={form.name}
+                          onChange={handleChange}
+                          name="name"
+                        />
+                      </div>
+                    </label>
+                    {errors.name && (
+                      <span style={{ color: "red" }}>{errors.name}</span>
+                    )}
                   </div>
-                </label>
-                {errors.name && (
-                  <span style={{ color: "red" }}>{errors.name}</span>
-                )}
-              </div>
-              <div className="my-2">
-                <label className="text-timberWolf font-medium mb-4">
-                  Your Email:
-                  <div className="mt-2">
-                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
-                    <input
-                      className="w-full"
-                      value={form.email}
-                      onChange={handleChange}
-                      type="text"
-                      name="email"
-                    />
+                  <div className="my-2">
+                    <label className="text-timberWolf font-medium mb-4">
+                      Your Email:
+                      <div className="mt-2">
+                        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
+                        <input
+                          className="w-full"
+                          value={form.email}
+                          onChange={handleChange}
+                          type="text"
+                          name="email"
+                        />
+                      </div>
+                    </label>
+                    {errors.email && (
+                      <span style={{ color: "red" }}>{errors.email}</span>
+                    )}
                   </div>
-                </label>
-                {errors.email && (
-                  <span style={{ color: "red" }}>{errors.email}</span>
-                )}
-              </div>
-              <div className="my-2">
-                <label className="text-timberWolf font-medium mb-4">
-                  Your Message:
-                  <div className="mt-2">
-                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
-                    <textarea
-                      row="7"
-                      className="w-full"
-                      value={form.message}
-                      onChange={handleChange}
-                      type="text"
-                      name="message"
-                    />
+                  <div className="my-2">
+                    <label className="text-timberWolf font-medium mb-4">
+                      Your Message:
+                      <div className="mt-2">
+                        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
+                        <textarea
+                          row="7"
+                          className="w-full"
+                          value={form.message}
+                          onChange={handleChange}
+                          type="text"
+                          name="message"
+                        />
+                      </div>
+                    </label>
+                    {errors.message && (
+                      <span style={{ color: "red" }}>{errors.message}</span>
+                    )}
                   </div>
-                </label>
-                {errors.message && (
-                  <span style={{ color: "red" }}>{errors.message}</span>
-                )}
-              </div>
-              <button
-                type="submit"
-                className="live-demo flex justify-center sm:gap-4 
+                  <button
+                    type="submit"
+                    className="live-demo flex justify-center sm:gap-4 
             gap-3 sm:text-[20px] text-[16px] text-timberWolf 
             font-bold font-beckman items-center py-5
             whitespace-nowrap sm:w-[130px] sm:h-[50px] 
             w-[100px] h-[45px] rounded-[10px] bg-night 
             hover:bg-battleGray hover:text-eerieBlack 
             transition duration-[0.2s] ease-in-out bg-white "
-                onMouseOver={() => {
-                  document
-                    .querySelector(".contact-btn")
-                    .setAttribute("src", sendHover);
-                }}
-                onMouseOut={() => {
-                  document
-                    .querySelector(".contact-btn")
-                    .setAttribute("src", send);
-                }}
-              >
-                {loading ? "Sending" : "Send"}
-                <img
-                  src={send}
-                  alt="send"
-                  className="contact-btn sm:w-[26px] sm:h-[26px] 
+                    onMouseOver={() => {
+                      document
+                        .querySelector(".contact-btn")
+                        .setAttribute("src", sendHover);
+                    }}
+                    onMouseOut={() => {
+                      document
+                        .querySelector(".contact-btn")
+                        .setAttribute("src", send);
+                    }}
+                  >
+                    {loading ? "Sending" : "Send"}
+                    <img
+                      src={send}
+                      alt="send"
+                      className="contact-btn sm:w-[26px] sm:h-[26px] 
               w-[23px] h-[23px] object-contain"
-                />
-              </button>{" "}
-            </form>
-          </div>{" "}
-        </div>
-      </div>
-    </MainLayout>
+                    />
+                  </button>{" "}
+                </form>
+              </div>{" "}
+            </div>
+          </div>
+        </motion.div>
+      </motion.section>
+    </span>
   );
 }
 

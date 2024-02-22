@@ -1,7 +1,13 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { navLinks } from "./constants";
+
 export default function NavBar(props) {
   const { onDarkMode } = props;
+  const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
+
   return (
     <div>
       <nav className="py-10 mb-12 flex justify-between">
@@ -11,7 +17,7 @@ export default function NavBar(props) {
             onClick={onDarkMode}
             className="cursor-pointer mr-2"
           />
-          <li className="mr-2 dark:text-neutral-100">
+          {/* <li className="mr-2 dark:text-neutral-100">
             <Link to="/">Home</Link>
           </li>
           <li className="mr-2 first-line:dark:text-neutral-100">
@@ -22,7 +28,16 @@ export default function NavBar(props) {
           </li>
           <li className="mr-2 dark:text-neutral-100">
             <Link to="/contact">Contact</Link>
-          </li>
+          </li> */}
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              lassName="mr-2 dark:text-neutral-100"
+              onClick={() => setActive(nav.title)}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </li>
+          ))}
           <li>
             <a
               href="#"

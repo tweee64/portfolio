@@ -19,9 +19,13 @@ function About() {
             scale: 1,
             speed: 450,
           }}
-          className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px]  "
+          className="bg-jetLight rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
         >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
+          <img
+            src={icon}
+            alt={title}
+            className="w-16 h-16 object-contain inline-block justify-self-center "
+          />
           <h3 className="text-taupe text-[18px] font-bold text-center">
             {title}
           </h3>
@@ -31,7 +35,7 @@ function About() {
   };
 
   return (
-    <MainLayout>
+    <span id="about">
       <div className=" p-10">
         <div></div>
         <motion.section
@@ -77,7 +81,7 @@ function About() {
           </div>
         </motion.section>
       </div>
-    </MainLayout>
+    </span>
   );
 }
 
