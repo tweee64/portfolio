@@ -1,11 +1,10 @@
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import profilepic from "./profilepic.jpeg";
-import MainLayout from "./layout/MainLayout";
 import { styles } from "./styles";
 export default function Home() {
   return (
-    <div>
-      <div className="text-center p-10">
+    <span className="pt-10 " id="home">
+      <div className="text-center p-10 ">
         <h2 className={styles.sectionHeadTextLight}>Thuy Pham</h2>
         <h3 className={styles.sectionSubTextLight}>Frontend Developer</h3>
         <p className="rext-md py-5 leading-8 text-gray-800 dark:text-neutral-300">
@@ -22,6 +21,6 @@ export default function Home() {
       <div className="relative mx-auto w-80 h-80">
         <img className="rounded-xl " alt="profilepic" src={profilepic} />
       </div>
-    </div>
+    </span>
   );
 }
