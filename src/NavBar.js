@@ -23,7 +23,10 @@ export default function NavBar(props) {
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
-                    className="mr-2 dark:text-neutral-100"
+                    className={`${
+                      active === nav.title ? "text-french" : "text-eerieBlack"
+                    } hover:text-taupe 
+                       tracking-[3px] cursor-pointer nav-links mr-2 dark:text-neutral-100`}
                     onClick={() => setActive(nav.title)}
                   >
                     <a href={`#${nav.id}`}>{nav.title}</a>
