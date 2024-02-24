@@ -1,5 +1,4 @@
 import React from "react";
-import MainLayout from "../layout/MainLayout";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 import { services } from "../constants";
@@ -19,14 +18,14 @@ function About() {
             scale: 1,
             speed: 450,
           }}
-          className="bg-jetLight rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
+          className="bg-gray-900 rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
         >
           <img
             src={icon}
             alt={title}
             className="w-16 h-16 object-contain inline-block justify-self-center "
           />
-          <h3 className="text-taupe text-[18px] font-bold text-center">
+          <h3 className="text-gray-400 text-[18px] font-bold text-center">
             {title}
           </h3>
         </div>
@@ -52,7 +51,7 @@ function About() {
           </motion.div>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
+            className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] dark:text-neutral-100"
           >
             Focused, results-driven and passionate about technology, I am
             particularly interested in front-end developer roles and

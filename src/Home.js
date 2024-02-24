@@ -6,7 +6,7 @@ export default function Home() {
     <span className="pt-10 " id="home">
       <div className="text-center p-10 ">
         <h2 className={styles.sectionHeadTextLight}>Thuy Pham</h2>
-        <h3 className={styles.sectionSubTextLight}>Frontend Developer</h3>
+        <h3 className={styles.sectionSubTextLight}>Fullstack Developer</h3>
         <p className="rext-md py-5 leading-8 text-gray-800 dark:text-neutral-300">
           Passionate software developer that is intrigued by how technology can
           help improve people's lives

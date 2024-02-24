@@ -8,6 +8,7 @@ import ux from "../ux.png";
 import prototype from "../prototype.png";
 import send from "../send.png";
 import sendHover from "../sendHover.png";
+import resume from "../Pham Thu Thuy_Resume.pdf";
 
 export {
   ncs_icon,
@@ -20,4 +21,5 @@ export {
   prototype,
   send,
   sendHover,
+  resume,
 };

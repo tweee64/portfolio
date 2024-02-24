@@ -1,5 +1,4 @@
 import React from "react";
-import MainLayout from "../layout/MainLayout";
 import "react-vertical-timeline-component/style.min.css";
 import {
   VerticalTimeline,
@@ -23,7 +22,7 @@ function Experience() {
       }}
       date={
         <div>
-          <h3 className="text-dim text-[18px] font-bold font-beckman">
+          <h3 className=" text-[18px] font-bold font-beckman ">
             {experience.date}
           </h3>
         </div>
@@ -40,9 +39,7 @@ function Experience() {
       }
     >
       <div>
-        <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
-          {experience.title}
-        </h3>
+        <h3 className={`${styles.sectionSubText}`}>{experience.title}</h3>
         <p
           className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
           style={{ margin: 0 }}

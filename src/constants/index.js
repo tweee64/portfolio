@@ -7,6 +7,7 @@ import {
   frontend,
   ux,
   prototype,
+  resume,
 } from "../assets/index";
 
 export const navLinks = [
