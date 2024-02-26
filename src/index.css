@@ -57,7 +57,18 @@ code {
   text-transform: uppercase;
   font-weight: 700;
 }
-
+.bg-color {
+  background-color: hsla(26.08695652, 85.18518519%, 94.70588235%, 1);
+}
+.text-color {
+  color: hsla(7.5, 78.87323944%, 72.15686275%, 1);
+}
+.bg-color-button {
+  background-color: hsla(7.5, 78.87323944%, 72.15686275%, 1);
+}
+.sub-bgcolor {
+  background-color: #dfcdbf;
+}
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

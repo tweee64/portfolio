@@ -109,7 +109,7 @@ function Contact() {
         >
           <h2 className={styles.sectionHeadText}>Contact</h2>
           <div className="flex justify-center h-screen">
-            <div className="bg-gray-300 w-9/12 h-4/6 p-10 rounded-md self-center">
+            <div className="sub-bgcolor w-9/12 h-4/6 p-10 rounded-md self-center">
               <h3 className={styles.sectionSubText}>Get in Touch</h3>
 
               <form

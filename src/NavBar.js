@@ -9,7 +9,7 @@ export default function NavBar(props) {
 
   return (
     <div className=" ">
-      <div className="fixed dark:bg-gray-900 w-full bg-white top-0 z-20 ">
+      <div className="fixed dark:bg-gray-900 w-full bg-color top-0 z-20 ">
         <main className="px-10 ">
           <nav className="pt-5 mb-12 flex justify-between ">
             <h1 className="text-xl dark:text-neutral-100 ">developedby</h1>
@@ -36,7 +36,7 @@ export default function NavBar(props) {
                   <a
                     href={resume}
                     download
-                    className="bg-cyan-500 text-white px-4 py-2 rounded-md ml-8  "
+                    className="bg-color-button text-white px-4 py-2 rounded-md ml-8"
                   >
                     Resume
                   </a>

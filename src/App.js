@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className={`${darkMode ? "dark" : ""} `}>
-        <div className=" dark:bg-gray-900">
+        <div className="bg-color dark:bg-gray-900">
           <div>
             <NavBar onDarkMode={handleDarkMode} />
           </div>
