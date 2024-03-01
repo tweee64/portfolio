@@ -10,7 +10,7 @@ function About() {
     return (
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="xs:w-[250px] w-1/5 card-gradient p-[1px] rounded-[20px] shadow-card"
+        className="xs:w-[250px] w-full sm:w-1/5 card-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
           options={{
@@ -18,14 +18,14 @@ function About() {
             scale: 1,
             speed: 450,
           }}
-          className="bg-gray-900 rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
+          className="bg-color-about rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
         >
           <img
             src={icon}
             alt={title}
             className="w-16 h-16 object-contain inline-block justify-self-center "
           />
-          <h3 className="text-gray-400 text-[18px] font-bold text-center">
+          <h3 className="text-on-card text-[18px] font-bold text-center">
             {title}
           </h3>
         </div>
@@ -73,7 +73,7 @@ function About() {
             </li>
           </motion.p>
 
-          <div className="mt-20 flex justify-between flex-wrap gap-10 ">
+          <div className="mt-20 flex flex-col sm:justify-between flex-wrap gap-10 ">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
