@@ -10,7 +10,7 @@ function About() {
     return (
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="xs:w-[250px] w-1/5 card-gradient p-[1px] rounded-[20px] shadow-card"
+        className="xs:w-[250px] w-1/5 ç p-[1px] rounded-[20px] shadow-card"
       >
         <div
           options={{
@@ -18,14 +18,14 @@ function About() {
             scale: 1,
             speed: 450,
           }}
-          className="bg-gray-900 rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
+          className="sub-bgcolor rounded-[20px] text-color pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
         >
           <img
             src={icon}
             alt={title}
-            className="w-16 h-16 object-contain inline-block justify-self-center "
+            className="w-16 h-16 object-contain  inline-block justify-self-center "
           />
-          <h3 className="text-gray-400 text-[18px] font-bold text-center">
+          <h3 className="text-gray-700 text-[18px] font-bold text-center">
             {title}
           </h3>
         </div>

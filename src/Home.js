@@ -12,9 +12,13 @@ export default function Home() {
           help improve people's lives
         </p>
       </div>
-      <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-        <AiFillInstagram />
-        <AiFillLinkedin />
+      <div className="text-5xl flex justify-center gap-16 pb-9 text-color ">
+        <a href="https://www.instagram.com/thuythuybird_/">
+          <AiFillInstagram />
+        </a>
+        <a href="https://www.linkedin.com/in/thuy-pham64/">
+          <AiFillLinkedin />
+        </a>
         <AiFillYoutube />
       </div>
 
