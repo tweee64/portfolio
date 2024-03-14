@@ -12,13 +12,13 @@ function Experience() {
   const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#dfcdbf",
-        color: "black",
+        background: "#D0B49F",
+        color: "#fffbe5",
         boxShadow:
           "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
       }}
       contentArrowStyle={{
-        borderRight: "7px solid #dfcdbf  ",
+        borderRight: "7px solid #D0B49F  ",
       }}
       date={
         <div>
@@ -27,7 +27,7 @@ function Experience() {
           </h3>
         </div>
       }
-      iconStyle={{ background: "#dfcdbf" }}
+      iconStyle={{ background: "#D0B49F" }}
       icon={
         <div className="flex justify-center items-center w-full h-full ">
           <img
@@ -59,7 +59,7 @@ function Experience() {
       <div className=" p-10">
         <h2 className={styles.sectionHeadText}>Experience</h2>
 
-        <VerticalTimeline lineColor="#dfcdbf">
+        <VerticalTimeline lineColor="#D0B49F">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
