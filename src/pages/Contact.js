@@ -109,7 +109,7 @@ function Contact() {
         >
           <h2 className={styles.sectionHeadText}>Contact</h2>
           <div className="flex justify-center h-screen">
-            <div className="bg-color-about w-9/12 h-4/6 p-10 rounded-md self-center">
+            <div className="bg-color-about dark:bg-neutral-200 w-9/12 h-4/6 p-10 rounded-md self-center">
               <h3 className={styles.sectionSubText}>Get in Touch</h3>
 
               <form
@@ -118,12 +118,12 @@ function Contact() {
                 className="flex flex-col justify-between h-32 text-on-card"
               >
                 <div className="my-2 ">
-                  <label className="text-timberWolf font-medium mb-4">
+                  <label className="text-timberWolf font-medium mb-4 dark:text-gray-800">
                     Your Name:
                     <div className="mt-2">
                       <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
                       <input
-                        className="w-full"
+                        className="w-full text-gray-800"
                         type="text"
                         value={form.name}
                         onChange={handleChange}
@@ -136,12 +136,12 @@ function Contact() {
                   )}
                 </div>
                 <div className="my-2">
-                  <label className="text-timberWolf font-medium mb-4">
+                  <label className="text-timberWolf font-medium mb-4 dark:text-gray-800">
                     Your Email:
                     <div className="mt-2">
                       <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
                       <input
-                        className="w-full"
+                        className="w-full text-gray-800"
                         value={form.email}
                         onChange={handleChange}
                         type="text"
@@ -154,13 +154,13 @@ function Contact() {
                   )}
                 </div>
                 <div className="my-2">
-                  <label className="text-timberWolf font-medium mb-4">
+                  <label className="text-timberWolf font-medium mb-4 dark:text-gray-800">
                     Your Message:
                     <div className="mt-2">
                       <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
                       <textarea
                         row="7"
-                        className="w-full"
+                        className="w-full text-gray-800"
                         value={form.message}
                         onChange={handleChange}
                         type="text"
@@ -180,25 +180,23 @@ function Contact() {
             whitespace-nowrap sm:w-[130px] sm:h-[50px] 
             w-[100px] h-[45px] rounded-[10px] bg-night 
             hover:bg-battleGray hover:text-eerieBlack 
-            transition duration-[0.2s] ease-in-out bg-color-button text-neutral-100 "
+            transition duration-[0.2s] ease-in-out bg-color-button dark:bg-teal-400 text-neutral-100 "
                   onMouseOver={() => {
-                    document
-                      .querySelector(".contact-btn")
-                      .setAttribute("src", sendHover);
+                    document.querySelector(".contact-btn");
+                    // .setAttribute("src", sendHover);
                   }}
                   onMouseOut={() => {
-                    document
-                      .querySelector(".contact-btn")
-                      .setAttribute("src", send);
+                    document.querySelector(".contact-btn");
+                    // .setAttribute("src", send);
                   }}
                 >
                   {loading ? "Sending" : "Send"}
-                  <img
+                  {/* <img
                     src={send}
                     alt="send"
                     className="contact-btn sm:w-[26px] sm:h-[26px] 
               w-[23px] h-[23px] object-contain "
-                  />
+                  /> */}
                 </button>{" "}
               </form>
             </div>{" "}

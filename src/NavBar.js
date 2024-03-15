@@ -1,7 +1,7 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import { navLinks } from "./constants";
-import { resume } from "./assets";
+import { resume, close, menu } from "./assets";
 export default function NavBar(props) {
   const { onDarkMode } = props;
   const [active, setActive] = useState("");
@@ -19,7 +19,7 @@ export default function NavBar(props) {
                 className="cursor-pointer mr-2"
               />
 
-              <ul className="flex-row flex gap-3">
+              <ul className="flex-row gap-3 list-none hidden sm:flex  mt-2">
                 {navLinks.map((nav) => (
                   <li
                     key={nav.id}
@@ -36,61 +36,64 @@ export default function NavBar(props) {
                   <a
                     href={resume}
                     download
-                    className="bg-color-button text-white px-4 py-2 rounded-md ml-8"
+                    className="bg-color-button dark:bg-teal-500 text-white  px-4 py-2 rounded-md ml-8"
                   >
                     Resume
                   </a>
                 </li>{" "}
               </ul>
-            </div>
-          </nav>
-          <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
-            {toggle ? (
-              <div
-                className={`p-6 bg-flashWhite opacity-[0.98] absolute 
+              {/* mobile */}
+              <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
+                {toggle ? (
+                  <div
+                    className={`p-6 bg-flashWhite opacity-[0.98] absolute 
                 top-0 left-0 w-screen h-[100vh] z-10 menu ${
                   toggle ? "menu-open" : "menu-close"
                 }`}
-              >
-                <div className="flex justify-end">
+                  >
+                    <div className="flex justify-end">
+                      <img
+                        src={close}
+                        alt="close"
+                        className="w-[22px] h-[22px] object-contain cursor-pointer"
+                        onClick={() => setToggle(!toggle)}
+                      />
+                    </div>
+                    <ul
+                      className="list-none flex flex-col -gap-[1rem] 
+                items-start justify-end mt-[10rem] -ml-[35px]"
+                    >
+                      {navLinks.map((nav) => (
+                        <li
+                          id={nav.id}
+                          key={nav.id}
+                          className={`${
+                            active === nav.title
+                              ? "text-french"
+                              : "text-eerieBlack"
+                          } text-[88px] font-bold font-arenq 
+                      uppercase tracking-[1px] cursor-pointer`}
+                          onClick={() => {
+                            setToggle(!toggle);
+                            setActive(nav.title);
+                          }}
+                        >
+                          <a href={`#${nav.id}`}>{nav.title}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
                   <img
-                    // src={close}
-                    alt="close"
-                    className="w-[22px] h-[22px] object-contain cursor-pointer"
+                    src={menu}
+                    alt="menu"
+                    className="w-[34px] h-[34px] object-contain cursor-pointer"
                     onClick={() => setToggle(!toggle)}
                   />
-                </div>
-                <ul
-                  className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]"
-                >
-                  {navLinks.map((nav) => (
-                    <li
-                      id={nav.id}
-                      key={nav.id}
-                      className={`${
-                        active === nav.title ? "text-french" : "text-eerieBlack"
-                      } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
-                      onClick={() => {
-                        setToggle(!toggle);
-                        setActive(nav.title);
-                      }}
-                    >
-                      <a href={`#${nav.id}`}>{nav.title}</a>
-                    </li>
-                  ))}
-                </ul>
+                )}
               </div>
-            ) : (
-              <img
-                // src={menu}
-                alt="menu"
-                className="w-[34px] h-[34px] object-contain cursor-pointer"
-                onClick={() => setToggle(!toggle)}
-              />
-            )}
-          </div>
+            </div>
+          </nav>
         </main>{" "}
       </div>
     </div>

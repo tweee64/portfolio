@@ -12,7 +12,7 @@ export default function Home() {
           help improve people's lives
         </p>
       </div>
-      <div className="text-5xl flex justify-center gap-16 pb-9 text-color ">
+      <div className="text-5xl dark:text-teal-300 flex justify-center gap-16 pb-9 text-color ">
         <a href="https://www.instagram.com/thuythuybird_/">
           <AiFillInstagram />
         </a>

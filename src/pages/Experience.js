@@ -8,26 +8,26 @@ import { styles } from "../styles";
 
 import { experiences } from "../constants";
 
-function Experience() {
+function Experience({ darkMode }) {
   const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#D0B49F",
-        color: "#fffbe5",
+        background: darkMode ? "#eaeaec " : "#D0B49F ",
+        color: darkMode ? "#292929" : "#fffbe5",
         boxShadow:
           "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
       }}
       contentArrowStyle={{
-        borderRight: "7px solid #D0B49F  ",
+        borderRight: `7px solid ${darkMode} ? '#eaeaec'  '#D0B49F' `,
       }}
       date={
         <div>
-          <h3 className=" text-[18px] font-bold font-beckman ">
+          <h3 className=" text-[18px] font-bold font-beckman text-black dark:text-neutral-100">
             {experience.date}
           </h3>
         </div>
       }
-      iconStyle={{ background: "#D0B49F" }}
+      iconStyle={{ background: darkMode ? "#eaeaec" : "#D0B49F" }}
       icon={
         <div className="flex justify-center items-center w-full h-full ">
           <img
@@ -59,7 +59,7 @@ function Experience() {
       <div className=" p-10">
         <h2 className={styles.sectionHeadText}>Experience</h2>
 
-        <VerticalTimeline lineColor="#D0B49F">
+        <VerticalTimeline lineColor={darkMode ? "#eaeaec" : "#D0B49F"}>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}

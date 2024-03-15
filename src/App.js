@@ -33,7 +33,7 @@ function App() {
               className="bg-experienceLight bg-cover bg-center 
         bg-no-repeat rounded-tl-[150px] rounded-br-[130px] mt-16"
             >
-              <Experience />
+              <Experience darkMode={darkMode} />
             </div>
           </div>
           <div>

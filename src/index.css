@@ -63,11 +63,17 @@ code {
 .text-color {
   color: #f08e80;
 }
+.bg-color-about-dark {
+  background-color: #f08e80;
+}
 .bg-color-button {
   background-color: #f08e80;
 }
 .sub-bgcolor {
   background-color: #dfcdbf;
+}
+.text-light {
+  color: #dfcdbf;
 }
 .bg-color-about {
   background-color: #d0b49f;

@@ -18,14 +18,14 @@ function About() {
             scale: 1,
             speed: 450,
           }}
-          className="bg-color-about rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
+          className="bg-color-about dark:bg-neutral-200 rounded-[20px] pt-10 pb-5 px-12 min-h-[280px] grid grid-rows-2 "
         >
           <img
             src={icon}
             alt={title}
-            className="w-16 h-16 object-contain  inline-block justify-self-center "
+            className="w-16 h-16 object-contain dark:text-black inline-block justify-self-center "
           />
-          <h3 className="text-on-card text-[18px] font-bold text-center">
+          <h3 className="text-on-card text-[18px] font-bold text-center dark:text-black">
             {title}
           </h3>
         </div>
@@ -73,7 +73,7 @@ function About() {
             </li>
           </motion.p>
 
-          <div className="mt-20 flex flex-col sm:justify-between flex-wrap gap-10 ">
+          <div className="mt-20 flex flex-col sm:flex-row sm:justify-between flex-wrap gap-10 ">
             {services.map((service, index) => (
               <ServiceCard key={service.title} index={index} {...service} />
             ))}
