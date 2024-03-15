@@ -1,7 +1,7 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import { navLinks } from "./constants";
-import { resume, close, menu } from "./assets";
+import { resume } from "./assets";
 import { FiAlignRight, FiX } from "react-icons/fi";
 
 export default function NavBar(props) {

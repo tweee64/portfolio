@@ -2,7 +2,6 @@ import React from "react";
 import { styles } from "../styles";
 import emailjs from "emailjs-com";
 import { useState, useRef } from "react";
-import { send, sendHover } from "../assets";
 import { motion } from "framer-motion";
 import { slideIn, staggerContainer } from "../utils/motion";
 
