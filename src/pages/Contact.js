@@ -108,21 +108,21 @@ function Contact() {
         >
           <h2 className={styles.sectionHeadText}>Contact</h2>
           <div className="flex justify-center h-screen">
-            <div className="bg-color-about dark:bg-neutral-200 w-9/12 h-4/6 p-10 rounded-md self-center">
+            <div className="bg-color-about dark:bg-gray-800 w-10/12 h-5/6 p-10 rounded-md self-center">
               <h3 className={styles.sectionSubText}>Get in Touch</h3>
 
               <form
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="flex flex-col justify-between h-32 text-on-card"
+                className="grid mt-4 text-on-card"
               >
                 <div className="my-2 ">
-                  <label className="text-timberWolf font-medium mb-4 dark:text-gray-800">
+                  <label className="text-timberWolf font-medium mb-4 dark:text-neutral-300">
                     Your Name:
                     <div className="mt-2">
                       <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
                       <input
-                        className="w-full text-gray-800"
+                        className="w-full h-8 rounded-md text-gray-800"
                         type="text"
                         value={form.name}
                         onChange={handleChange}
@@ -135,12 +135,12 @@ function Contact() {
                   )}
                 </div>
                 <div className="my-2">
-                  <label className="text-timberWolf font-medium mb-4 dark:text-gray-800">
+                  <label className="text-timberWolf font-medium mb-4 dark:text-neutral-300">
                     Your Email:
                     <div className="mt-2">
                       <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
                       <input
-                        className="w-full text-gray-800"
+                        className="w-full h-8 rounded-md text-gray-800"
                         value={form.email}
                         onChange={handleChange}
                         type="text"
@@ -153,13 +153,13 @@ function Contact() {
                   )}
                 </div>
                 <div className="my-2">
-                  <label className="text-timberWolf font-medium mb-4 dark:text-gray-800">
+                  <label className="text-timberWolf font-medium mb-4 dark:text-neutral-300">
                     Your Message:
                     <div className="mt-2">
                       <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md"></div>
                       <textarea
                         row="7"
-                        className="w-full text-gray-800"
+                        className="w-full text-gray-800 h-16 rounded-md"
                         value={form.message}
                         onChange={handleChange}
                         type="text"
@@ -173,8 +173,8 @@ function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="live-demo flex justify-center sm:gap-4 
-            gap-3 sm:text-[20px] text-[16px] text-timberWolf 
+                  className="mt-1 live-demo flex justify-center sm:gap-4 
+            gap-3 sm:text-[16px] text-[16px] text-timberWolf 
             font-bold font-beckman items-center py-5
             whitespace-nowrap sm:w-[130px] sm:h-[50px] 
             w-[100px] h-[45px] rounded-[10px] bg-night 

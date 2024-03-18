@@ -11,6 +11,7 @@ import sendHover from "../sendHover.png";
 import resume from "../Pham Thu Thuy_Resume.pdf";
 import close from "../close.png";
 import menu from "../menu.png";
+import logo from "../brand-logo.png";
 
 export {
   ncs_icon,
@@ -26,4 +27,5 @@ export {
   resume,
   close,
   menu,
+  logo,
 };

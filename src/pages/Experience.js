@@ -12,13 +12,13 @@ function Experience({ darkMode }) {
   const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
       contentStyle={{
-        background: darkMode ? "#eaeaec " : "#D0B49F ",
+        background: darkMode ? "rgb(31 41 55) " : "#D0B49F ",
         color: darkMode ? "#292929" : "#fffbe5",
         boxShadow:
           "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
       }}
       contentArrowStyle={{
-        borderRight: `7px solid ${darkMode} ? '#eaeaec'  '#D0B49F' `,
+        borderRight: `7px solid ${darkMode} ? 'rgb(31 41 55)'  '#D0B49F' `,
       }}
       date={
         <div>
@@ -27,7 +27,7 @@ function Experience({ darkMode }) {
           </h3>
         </div>
       }
-      iconStyle={{ background: darkMode ? "#eaeaec" : "#D0B49F" }}
+      iconStyle={{ background: darkMode ? "rgb(31 41 55)" : "#D0B49F" }}
       icon={
         <div className="flex justify-center items-center w-full h-full ">
           <img
@@ -41,13 +41,13 @@ function Experience({ darkMode }) {
       <div>
         <h3 className={`${styles.sectionSubText}`}>{experience.title}</h3>
         <p
-          className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
+          className="text-taupe text-[22px] dark:text-neutral-300 font-semibold font-overcameBold tracking-[1px]"
           style={{ margin: 0 }}
         >
           {experience.company_name}
         </p>
         {experience.description?.map((element) => (
-          <li>{element}</li>
+          <li className="dark:text-neutral-200">{element}</li>
         ))}
       </div>
     </VerticalTimelineElement>

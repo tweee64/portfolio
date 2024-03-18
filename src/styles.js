@@ -26,7 +26,7 @@ const styles = {
   sectionHeadTextLight:
     "text-timberWolf text-color font-black md:text-[60px] sm:text-[48px] xs:text-[40px] text-[30px] font-poppins dark:text-neutral-100",
   sectionSubText:
-    "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins ",
+    "sm:text-[18px] text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins dark:text-neutral-300 ",
   sectionSubTextLight:
     "sm:text-[18px] text-color text-[16px] text-taupe uppercase tracking-wider font-semibold font-poppins dark:text-neutral-200",
 };
