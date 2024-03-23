@@ -9,7 +9,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: "font-arenq";
+  src: url("./assets/fonts/arenq/Arenq.otf");
+}
+@font-face {
+  font-family: "font-bop";
+  src: url("./assets/fonts/bop/bop.ttf");
+}
+@font-face {
+  font-family: "font-valentina";
+  src: url("./assets/fonts/valentina/valentina.ttf");
+}
 
+.custom-font {
+  font-family: "font-valentina";
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

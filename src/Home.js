@@ -1,6 +1,7 @@
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import profilepic from "./profilepic.jpeg";
 import { styles } from "./styles";
+import { resume } from "./assets";
 export default function Home() {
   return (
     <span className="pt-10 " id="home">
@@ -12,14 +13,14 @@ export default function Home() {
           help improve people's lives
         </p>
       </div>
-      <div className="text-5xl dark:text-teal-300 flex justify-center gap-16 pb-9 text-color ">
-        <a href="https://www.instagram.com/thuythuybird_/">
+      <div className=" dark:text-teal-300 flex justify-center gap-16 pb-9 text-color ">
+        {/* <a href="https://www.instagram.com/thuythuybird_/">
           <AiFillInstagram />
-        </a>
-        <a href="https://www.linkedin.com/in/thuy-pham64/">
+        </a> */}
+        <a href="https://www.linkedin.com/in/thuy-pham64/" className="text-5xl">
           <AiFillLinkedin />
         </a>
-        <AiFillYoutube />
+        {/* <AiFillYoutube /> */}
       </div>
 
       <div className="relative mx-auto w-80 h-80">

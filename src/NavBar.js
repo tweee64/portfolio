@@ -13,12 +13,16 @@ export default function NavBar(props) {
     <div className=" ">
       <div className="fixed dark:bg-gray-900 w-full bg-color top-0 z-20 ">
         <main className="px-10 ">
-          <nav className="pt-5 mb-12 flex justify-between ">
-            <h1 className="text-xl dark:text-neutral-100 ">thuy</h1>
-            {/* <img src={logo} alt="logo" className="w-[50px] h-[30px]" /> */}
+          <nav className="pt-5 mb-12 ml-2 flex justify-between ">
+            <a href="logo" onClick={() => setActive("Home")}>
+              <h1 className="text-[32px] dark:text-neutral-100 custom-font ">
+                thuy
+              </h1>
+            </a>
+
             <div className="flex dark:text-neutral-100">
               <ul className="flex-row gap-3 list-none hidden sm:flex  mt-2">
-                <div className="grid content-center ">
+                <div className="grid content-center mb-4 ">
                   <BsFillMoonStarsFill
                     onClick={onDarkMode}
                     className="justify-center cursor-pointer mr-2"
