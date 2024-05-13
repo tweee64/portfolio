@@ -1,5 +1,5 @@
 import { AiFillInstagram, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
-import profilepic from "./profilepic.jpeg";
+import profilepic from "./profilepic.jpg";
 import { styles } from "./styles";
 export default function Home() {
   return (
