@@ -22,7 +22,7 @@ function Experience({ darkMode }) {
       }}
       date={
         <div>
-          <h3 className=" text-[18px] font-bold font-beckman text-black dark:text-neutral-100">
+          <h3 className=" text-[16px] font-bold font-beckman text-color dark:text-neutral-100">
             {experience.date}
           </h3>
         </div>

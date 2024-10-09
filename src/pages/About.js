@@ -51,7 +51,7 @@ function About() {
           </motion.div>
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] dark:text-neutral-100"
+            className="mt-4 text-taupe text-[16px] max-w-3xl leading-[30px] dark:text-neutral-100"
           >
             Focused, results-driven and passionate about technology, I am
             particularly interested in front-end developer roles and

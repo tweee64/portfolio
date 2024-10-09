@@ -35,6 +35,12 @@ const experiences = [
     icon: ncs_icon,
     iconBg: "#333333",
     date: "Mar 2022 - Present",
+    description: [
+      "Revamped and implemented the existing system that is used by over 100 staffs using new technical stacks including AngularJs, HTML/CSS, Java, MSSQL",
+      "Successfully integrated third-party APIs that improves efficiency of the system.",
+      "Contributed to the data migration of legacy system from Oracle to MSSQL Server.",
+      "Collaborated with the UI/UX team to refine key user requirements, boosting users' experiences.",
+    ],
   },
   {
     title: "Software Engineer Intern",
