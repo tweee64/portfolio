@@ -12,7 +12,7 @@ function Experience({ darkMode }) {
   const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
       contentStyle={{
-        background: darkMode ? "rgb(31 41 55) " : "#D0B49F ",
+        background: darkMode ? "rgb(31 41 55) " : "#A15C38",
         color: darkMode ? "#292929" : "#fffbe5",
         boxShadow:
           "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",

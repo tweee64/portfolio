@@ -42,16 +42,16 @@ function About() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
-          className={` `}
+          className={``}
         >
           <motion.div variants={textVariant()}>
             {" "}
             <h2 className={styles.sectionHeadText}>About</h2>{" "}
             <p className={styles.sectionSubText}>Introduction</p>
           </motion.div>
-          <motion.p
+          <motion.div
             variants={fadeIn("", "", 0.1, 1)}
-            className="mt-4 text-taupe text-[16px] max-w-3xl leading-[30px] dark:text-neutral-100"
+            className="mt-4 text-taupe text-[16px] leading-[30px] dark:text-neutral-100"
           >
             Focused, results-driven and passionate about technology, I am
             particularly interested in front-end developer roles and
@@ -71,7 +71,7 @@ function About() {
               and challenging environment self-driven individuals who is humble
               to learn and contribute
             </li>
-          </motion.p>
+          </motion.div>
 
           <div className="mt-20 flex flex-col sm:flex-row sm:justify-between flex-wrap gap-10 ">
             {services.map((service, index) => (

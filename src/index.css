@@ -73,16 +73,16 @@ code {
   font-weight: 700;
 }
 .bg-color {
-  background-color: hsla(26.08695652, 85.18518519%, 94.70588235%, 1);
+  background-color: #f7f1f0;
 }
 .text-color {
-  color: #f08e80;
+  color: #a15c38;
 }
 .bg-color-about-dark {
   background-color: #f08e80;
 }
 .bg-color-button {
-  background-color: #f08e80;
+  background-color: #a15c38;
 }
 .sub-bgcolor {
   background-color: #dfcdbf;
@@ -91,7 +91,7 @@ code {
   color: #dfcdbf;
 }
 .bg-color-about {
-  background-color: #d0b49f;
+  background-color: #a15c38;
 }
 .text-on-card {
   color: #fffbe5;
