@@ -78,9 +78,13 @@ code {
 .text-color {
   color: #a15c38;
 }
-.bg-color-about-dark {
-  background-color: #f08e80;
+.text-color-exerience-date {
+  color: #fffbe5;
+  @media (min-width: 1170px) {
+    color: #a15c38;
+  }
 }
+
 .bg-color-button {
   background-color: #a15c38;
 }

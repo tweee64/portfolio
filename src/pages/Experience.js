@@ -18,16 +18,17 @@ function Experience({ darkMode }) {
           "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
       }}
       contentArrowStyle={{
-        borderRight: `7px solid ${darkMode} ? 'rgb(31 41 55)'  '#D0B49F' `,
+        borderRight: `7px solid  `,
+        color: darkMode ? "rgb(31 41 55)" : "#A15C38",
       }}
       date={
         <div>
-          <h3 className=" text-[16px] font-bold font-beckman text-color dark:text-neutral-100">
+          <h3 className=" text-[16px] font-bold font-beckman text-color-exerience-date dark:text-neutral-100">
             {experience.date}
           </h3>
         </div>
       }
-      iconStyle={{ background: darkMode ? "rgb(31 41 55)" : "#D0B49F" }}
+      iconStyle={{ background: darkMode ? "rgb(31 41 55)" : "#A15C38" }}
       icon={
         <div className="flex justify-center items-center w-full h-full ">
           <img
@@ -59,7 +60,7 @@ function Experience({ darkMode }) {
       <div className=" p-10">
         <h2 className={styles.sectionHeadText}>Experience</h2>
 
-        <VerticalTimeline lineColor={darkMode ? "#eaeaec" : "#D0B49F"}>
+        <VerticalTimeline lineColor={darkMode ? "#eaeaec" : "#A15C38"}>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
